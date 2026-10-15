@@ -1,0 +1,168 @@
+# name|kind|template|doc      ($0 marks where the caret goes; \n and \t are escapes)
+# Kinds: EFFECT (completion_reward), TRIGGER (available/bypass), SCOPE (both), ANY (both), ICON
+# This is a starter list. Use Tools > Import Clausewitz docs... to load the full list from your game.
+add_political_power|EFFECT|add_political_power = $0|Add (or subtract) political power
+add_stability|EFFECT|add_stability = $0|Add stability (0.05 = 5%)
+add_war_support|EFFECT|add_war_support = $0|Add war support (0.05 = 5%)
+set_stability|EFFECT|set_stability = $0|Set stability to a fixed value
+set_war_support|EFFECT|set_war_support = $0|Set war support to a fixed value
+add_manpower|EFFECT|add_manpower = $0|Add manpower
+add_command_power|EFFECT|add_command_power = $0|Add command power
+add_research_slot|EFFECT|add_research_slot = $0|Add research slots
+add_ideas|EFFECT|add_ideas = $0|Add a national idea / spirit
+remove_ideas|EFFECT|remove_ideas = $0|Remove a national idea
+add_timed_idea|EFFECT|add_timed_idea = {\n\tidea = $0\n\tdays = 365\n}|Add an idea for a limited time
+swap_ideas|EFFECT|swap_ideas = {\n\tremove_idea = $0\n\tadd_idea = \n}|Replace one idea with another
+add_popularity|EFFECT|add_popularity = {\n\tideology = $0\n\tpopularity = 0.1\n}|Change an ideology's popularity
+set_politics|EFFECT|set_politics = {\n\truling_party = $0\n\tlast_election = "1936.1.1"\n\telection_frequency = 48\n\telections_allowed = no\n}|Set the ruling party
+army_experience|EFFECT|army_experience = $0|Add army experience
+navy_experience|EFFECT|navy_experience = $0|Add navy experience
+air_experience|EFFECT|air_experience = $0|Add air experience
+add_to_variable|EFFECT|add_to_variable = { $0 = 1 }|Add to a variable
+set_variable|EFFECT|set_variable = { $0 = 0 }|Set a variable
+set_temp_variable|EFFECT|set_temp_variable = { $0 = 0 }|Set a temporary variable
+set_country_flag|EFFECT|set_country_flag = $0|Set a country flag
+clr_country_flag|EFFECT|clr_country_flag = $0|Clear a country flag
+set_global_flag|EFFECT|set_global_flag = $0|Set a global flag
+clr_global_flag|EFFECT|clr_global_flag = $0|Clear a global flag
+country_event|EFFECT|country_event = {\n\tid = $0\n\tdays = 1\n}|Fire a country event
+news_event|EFFECT|news_event = {\n\tid = $0\n}|Fire a news event
+declare_war_on|EFFECT|declare_war_on = {\n\ttarget = $0\n\ttype = annex_everything\n}|Declare war on a country
+create_wargoal|EFFECT|create_wargoal = {\n\ttype = annex_everything\n\ttarget = $0\n}|Give a wargoal against a country
+annex_country|EFFECT|annex_country = {\n\ttarget = $0\n\ttransfer_troops = yes\n}|Annex a country
+puppet|EFFECT|puppet = $0|Make a country your puppet
+give_guarantee|EFFECT|give_guarantee = $0|Guarantee a country
+add_to_faction|EFFECT|add_to_faction = $0|Add a country to your faction
+create_faction|EFFECT|create_faction = "$0"|Create a faction
+add_to_war|EFFECT|add_to_war = {\n\ttargeted_alliance = $0\n\tenemy = \n}|Add a country to a war
+transfer_state|EFFECT|transfer_state = $0|Transfer a state (by id) to the scoped country
+add_state_core|EFFECT|add_state_core = $0|Add a core on a state (by id)
+remove_state_core|EFFECT|remove_state_core = $0|Remove a core from a state (by id)
+add_core_of|EFFECT|add_core_of = $0|State scope: add a core for a country
+add_building_construction|EFFECT|add_building_construction = {\n\ttype = $0\n\tlevel = 1\n\tinstant_build = yes\n}|State scope: build something
+add_extra_state_shared_building_slots|EFFECT|add_extra_state_shared_building_slots = $0|State scope: add building slots
+set_technology|EFFECT|set_technology = {\n\t$0 = 1\n}|Grant a technology
+add_tech_bonus|EFFECT|add_tech_bonus = {\n\tname = $0\n\tbonus = 1.0\n\tuses = 1\n\tcategory = \n}|Research bonus
+add_equipment_to_stockpile|EFFECT|add_equipment_to_stockpile = {\n\ttype = $0\n\tamount = 100\n\tproducer = \n}|Add equipment
+add_opinion_modifier|EFFECT|add_opinion_modifier = {\n\ttarget = $0\n\tmodifier = \n}|Add an opinion modifier
+add_ai_strategy|EFFECT|add_ai_strategy = {\n\ttype = $0\n\tid = \n\tvalue = 100\n}|Add an AI strategy
+activate_decision|EFFECT|activate_decision = $0|Activate a decision
+complete_national_focus|EFFECT|complete_national_focus = $0|Instantly complete a focus
+unlock_national_focus|EFFECT|unlock_national_focus = $0|Unlock a focus
+hidden_effect|EFFECT|hidden_effect = {\n\t$0\n}|Run effects without showing a tooltip
+custom_effect_tooltip|EFFECT|custom_effect_tooltip = $0|Show a localisation key as tooltip
+effect_tooltip|EFFECT|effect_tooltip = {\n\t$0\n}|Show effects in the tooltip without running them
+if|EFFECT|if = {\n\tlimit = {\n\t\t$0\n\t}\n}|Conditional effect block
+random_list|EFFECT|random_list = {\n\t50 = {\n\t\t$0\n\t}\n\t50 = {\n\t}\n}|Weighted random outcomes
+set_capital|EFFECT|set_capital = $0|Move the capital to a state (by id)
+set_cosmetic_tag|EFFECT|set_cosmetic_tag = $0|Change the displayed country name/flag
+drop_cosmetic_tag|EFFECT|drop_cosmetic_tag = yes|Remove the cosmetic tag
+set_autonomy|EFFECT|set_autonomy = {\n\ttarget = $0\n\tautonomy_state = autonomy_puppet\n}|Change a subject's autonomy level
+release|EFFECT|release = $0|Release a country
+start_civil_war|EFFECT|start_civil_war = {\n\tideology = $0\n\tsize = 0.5\n}|Start a civil war
+load_focus_tree|EFFECT|load_focus_tree = $0|Switch the country to another focus tree
+add_named_threat|EFFECT|add_named_threat = {\n\tthreat = 2\n\tname = $0\n}|Add world tension
+set_rule|EFFECT|set_rule = {\n\t$0 = no\n}|Change a country rule
+create_country_leader|EFFECT|create_country_leader = {\n\tname = "$0"\n\tdesc = ""\n\tpicture = ""\n\texpire = "1965.1.1"\n\tideology = \n\ttraits = { }\n}|Create a country leader
+log|EFFECT|log = "$0"|Write a line to the game log
+ROOT|SCOPE||The country the effect started in
+THIS|SCOPE||The current scope
+PREV|SCOPE||The previous scope
+FROM|SCOPE||The scope that triggered this one
+OWNER|SCOPE||State scope: the owning country
+CONTROLLER|SCOPE||State scope: the controlling country
+CAPITAL|SCOPE||The capital state
+OVERLORD|SCOPE||A subject's overlord
+every_country|SCOPE||Every country (use limit = { } to filter)
+random_country|SCOPE||One random country
+every_other_country|SCOPE||Every country except the current one
+random_other_country|SCOPE||One random other country
+every_neighbor_country|SCOPE||Every neighbouring country
+random_neighbor_country|SCOPE||One random neighbouring country
+every_enemy_country|SCOPE||Every country at war with you
+random_enemy_country|SCOPE||One random enemy
+every_allied_country|SCOPE||Every ally
+every_owned_state|SCOPE||Every state you own
+random_owned_state|SCOPE||One random owned state
+every_state|SCOPE||Every state
+random_state|SCOPE||One random state
+GER|SCOPE||Germany
+SOV|SCOPE||Soviet Union
+USA|SCOPE||United States
+ENG|SCOPE||United Kingdom
+FRA|SCOPE||France
+ITA|SCOPE||Italy
+JAP|SCOPE||Japan
+CHI|SCOPE||China
+POL|SCOPE||Poland
+CAN|SCOPE||Canada
+AST|SCOPE||Australia
+has_completed_focus|TRIGGER|has_completed_focus = $0|A focus has been completed
+has_country_flag|TRIGGER|has_country_flag = $0|Country flag is set
+has_global_flag|TRIGGER|has_global_flag = $0|Global flag is set
+has_idea|TRIGGER|has_idea = $0|Country has an idea
+has_war|TRIGGER|has_war = yes|Country is at war
+has_war_with|TRIGGER|has_war_with = $0|At war with a country
+has_defensive_war|TRIGGER|has_defensive_war = yes|In a defensive war
+is_in_faction|TRIGGER|is_in_faction = yes|Is in a faction
+is_in_faction_with|TRIGGER|is_in_faction_with = $0|In a faction with a country
+is_faction_leader|TRIGGER|is_faction_leader = yes|Leads a faction
+is_ai|TRIGGER|is_ai = yes|Controlled by the AI
+is_subject|TRIGGER|is_subject = yes|Is a subject
+is_puppet_of|TRIGGER|is_puppet_of = $0|Is a puppet of a country
+is_major|TRIGGER|is_major = yes|Is a major power
+has_government|TRIGGER|has_government = $0|Ruling ideology matches
+has_political_power|TRIGGER|has_political_power > $0|Political power comparison
+has_stability|TRIGGER|has_stability > $0|Stability comparison
+has_war_support|TRIGGER|has_war_support > $0|War support comparison
+amount_research_slots|TRIGGER|amount_research_slots > $0|Number of research slots
+has_dlc|TRIGGER|has_dlc = "$0"|Player owns a DLC
+has_tech|TRIGGER|has_tech = $0|Country has a technology
+num_of_factories|TRIGGER|num_of_factories > $0|Total factories
+num_of_military_factories|TRIGGER|num_of_military_factories > $0|Military factories
+num_of_civilian_factories|TRIGGER|num_of_civilian_factories > $0|Civilian factories
+num_divisions|TRIGGER|num_divisions > $0|Number of divisions
+has_army_size|TRIGGER|has_army_size = {\n\tsize > $0\n}|Army size
+has_navy_size|TRIGGER|has_navy_size = {\n\tsize > $0\n}|Navy size
+controls_state|TRIGGER|controls_state = $0|Controls a state (by id)
+owns_state|TRIGGER|owns_state = $0|Owns a state (by id)
+is_owned_by|TRIGGER|is_owned_by = $0|State scope: owned by a country
+is_controlled_by|TRIGGER|is_controlled_by = $0|State scope: controlled by a country
+has_capitulated|TRIGGER|has_capitulated = yes|Country has capitulated
+surrender_progress|TRIGGER|surrender_progress > $0|Surrender progress
+date|TRIGGER|date > $0|Compare with the current date (e.g. 1939.9.1)
+threat|TRIGGER|threat > $0|World tension
+country_exists|TRIGGER|country_exists = $0|A country exists
+exists|TRIGGER|exists = $0|A country exists
+tag|TRIGGER|tag = $0|The country's current tag
+original_tag|TRIGGER|original_tag = $0|The country's original tag
+has_decision|TRIGGER|has_decision = $0|Decision is available/active
+check_variable|TRIGGER|check_variable = { $0 > 1 }|Compare a variable
+has_event_target|TRIGGER|has_event_target = $0|An event target exists
+has_game_rule|TRIGGER|has_game_rule = {\n\trule = $0\n\toption = \n}|Game rule check
+always|TRIGGER|always = yes|Always true/false
+hidden_trigger|TRIGGER|hidden_trigger = {\n\t$0\n}|Conditions without a tooltip
+custom_trigger_tooltip|TRIGGER|custom_trigger_tooltip = {\n\ttooltip = $0\n}|Custom tooltip for conditions
+count_triggers|TRIGGER|count_triggers = {\n\tamount = 2\n\t$0\n}|At least N conditions true
+any_country|TRIGGER|any_country = {\n\t$0\n}|Any country matches
+any_other_country|TRIGGER|any_other_country = {\n\t$0\n}|Any other country matches
+any_neighbor_country|TRIGGER|any_neighbor_country = {\n\t$0\n}|Any neighbour matches
+any_enemy_country|TRIGGER|any_enemy_country = {\n\t$0\n}|Any enemy matches
+any_allied_country|TRIGGER|any_allied_country = {\n\t$0\n}|Any ally matches
+any_owned_state|TRIGGER|any_owned_state = {\n\t$0\n}|Any owned state matches
+any_state|TRIGGER|any_state = {\n\t$0\n}|Any state matches
+NOT|ANY|NOT = {\n\t$0\n}|True when none of the conditions are true
+AND|ANY|AND = {\n\t$0\n}|All conditions must be true
+OR|ANY|OR = {\n\t$0\n}|At least one condition must be true
+limit|ANY|limit = {\n\t$0\n}|Filter for scopes and if-blocks
+else_if|ANY|else_if = {\n\tlimit = {\n\t\t$0\n\t}\n}|Else-if branch
+else|ANY|else = {\n\t$0\n}|Else branch
+GFX_goal_unknown|ICON||Fallback icon
+GFX_goal_generic_construct_infrastructure|ICON||Infrastructure
+GFX_goal_generic_production|ICON||Industry
+GFX_goal_generic_army_doctrines|ICON||Army
+GFX_goal_generic_air_doctrine|ICON||Air force
+GFX_goal_generic_political_pressure|ICON||Political pressure
+GFX_goal_generic_demand_territory|ICON||Territorial demands
+GFX_goal_generic_national_unity|ICON||National unity
+GFX_goal_generic_allies|ICON||Allies
